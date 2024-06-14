@@ -2,7 +2,6 @@
 	heap
 	This question requires you to implement a binary heap function
 */
-// I AM NOT DONE
 
 use std::cmp::Ord;
 use std::default::Default;
@@ -37,7 +36,9 @@ where
     }
 
     pub fn add(&mut self, value: T) {
-        //TODO
+        self.items.push(value);
+        self.count += 1;
+        self.heapify_up(self.count);
     }
 
     fn parent_idx(&self, idx: usize) -> usize {
